@@ -1,8 +1,8 @@
-git config --global user.name "wnb"            # Çë»»³ÉÄã×Ô¼ºµÄÃû×Ö£¬³ı·ÇÄã´ÕÇÉÒ²½Ğwukong.sun
-git config --global user.email "1910975064@qq.com" # Í¬ÉÏ
-git config --global merge.tool "kdiff3"               # ÒªÊÇÃ»×°KDiff3¾Í²»ÓÃÉèÕâÒ»ĞĞ
-git config --global push.default simple               # ÒªÊÇÄã·ÇÒªÓÃµÍ°æ±¾µÄGit£¨±ÈÈç1.7.x£©£¬ºÃ°É£¬ÄÇ¾Í²»ÉèsimpleÉècurrent£¬·ñÔòÄãµÄGit²»Ö§³Ö
-git config --global core.autocrlf false               # ÈÃGit²»Òª¹ÜWindows/Unix»»ĞĞ·û×ª»»µÄÊÂ
-git config --global gui.encoding utf-8                # ±ÜÃâgit guiÖĞµÄÖĞÎÄÂÒÂë
-git config --global core.quotepath off                # ±ÜÃâgit statusÏÔÊ¾µÄÖĞÎÄÎÄ¼şÃûÂÒÂë
-
+git config --global user.name "wnb"            # è¯·æ¢æˆä½ è‡ªå·±çš„åå­—ï¼Œé™¤éä½ å‡‘å·§ä¹Ÿå«wukong.sun
+git config --global user.email "1910975064@qq.com" # åŒä¸Š
+git config --global merge.tool "kdiff3"               # è¦æ˜¯æ²¡è£…KDiff3å°±ä¸ç”¨è®¾è¿™ä¸€è¡Œ
+git config --global push.default simple               # è¦æ˜¯ä½ éè¦ç”¨ä½ç‰ˆæœ¬çš„Gitï¼ˆæ¯”å¦‚1.7.xï¼‰ï¼Œå¥½å§ï¼Œé‚£å°±ä¸è®¾simpleè®¾currentï¼Œå¦åˆ™ä½ çš„Gitä¸æ”¯æŒ
+git config --global core.autocrlf false               # è®©Gitä¸è¦ç®¡Windows/Unixæ¢è¡Œç¬¦è½¬æ¢çš„äº‹
+git config --global gui.encoding utf-8                # é¿å…git guiä¸­çš„ä¸­æ–‡ä¹±ç 
+git config --global core.quotepath off                # é¿å…git statusæ˜¾ç¤ºçš„ä¸­æ–‡æ–‡ä»¶åä¹±ç 
+woshihaoren 
