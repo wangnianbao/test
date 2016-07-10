@@ -1,0 +1,8 @@
+git config --global user.name "wnb"            # 请换成你自己的名字，除非你凑巧也叫wukong.sun
+git config --global user.email "1910975064@qq.com" # 同上
+git config --global merge.tool "kdiff3"               # 要是没装KDiff3就不用设这一行
+git config --global push.default simple               # 要是你非要用低版本的Git（比如1.7.x），好吧，那就不设simple设current，否则你的Git不支持
+git config --global core.autocrlf false               # 让Git不要管Windows/Unix换行符转换的事
+git config --global gui.encoding utf-8                # 避免git gui中的中文乱码
+git config --global core.quotepath off                # 避免git status显示的中文文件名乱码
+
