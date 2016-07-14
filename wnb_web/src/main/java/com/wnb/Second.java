@@ -6,5 +6,6 @@ package com.wnb;
 public class Second {
     public static void main(String[] args) {
         System.out.println("我是王年宝");
+        System.out.println("我是王年宝");
     }
 }
