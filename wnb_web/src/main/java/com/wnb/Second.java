@@ -10,5 +10,6 @@ public class Second {
         System.out.println("我是王金生");
         System.out.println("我是王金生");
         System.out.println("我是王年宝");
+        System.out.println("我是王老二");
     }
 }
