@@ -13,7 +13,7 @@ public class Second {
         System.out.println("我是王老二");
         System.out.println("我在北京");
         System.out.println("我在北京");
-
+        System.out.println("可恶的英语，我恨死你啦");
 
     }
 }
