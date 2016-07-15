@@ -14,6 +14,7 @@ public class Second {
         System.out.println("我在北京");
         System.out.println("我在北京");
         System.out.println("可恶的英语，我恨死你啦");
+        System.out.println("可恶的英语，我恨死你啦");
 
     }
 }
