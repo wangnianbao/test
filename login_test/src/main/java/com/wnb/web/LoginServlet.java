@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by wangnianbao on 2016/7/23.
  */
-<<<<<<< Updated upstream
+
 public class LoginServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,8 +20,4 @@ public class LoginServlet extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(request, response);
     }
-=======
-public class LoginServlet {
-
->>>>>>> Stashed changes
 }
