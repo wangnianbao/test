@@ -3,6 +3,7 @@ package com.wnb.web.db;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.wnb.web.model.UserInfo;
+import com.wnb.web.util.MD5Utils;
 import sun.security.provider.MD5;
 
 import java.security.MessageDigest;
@@ -25,14 +26,9 @@ public class DataBaseDao {
             return false;
         }
         try {
-            try {
-                MessageDigest md5 = MessageDigest.getInstance("MD5");
-                md5.digest();
-            } catch (NoSuchAlgorithmException e) {
-                e.printStackTrace();
-            }
+            String passwordMd5 = MD5Utils.getHash(password,MD5Utils.MD5);
             Statement stmt = connection.createStatement();
-            String sql = "insert into usermessage(username,password,xueli,sex) values('"+username+"','"+password+"','"+xueli+"','"+sex+"')";
+            String sql = "insert into usermessage(username,password,xueli,sex) values('"+username+"','"+passwordMd5+"','"+xueli+"','"+sex+"')";
             int result = stmt.executeUpdate(sql);
             System.out.println("操作数据库结果为空：" + result);
             if (result > 0){
@@ -54,8 +50,9 @@ public class DataBaseDao {
         }
         try {
             Statement stmt = connection.createStatement();
+            String passwordMd5 = MD5Utils.getHash(password,MD5Utils.MD5);
            // String sql = "insert into usermessage(username,password,xueli,sex) values('"+username+"','"+password+"','"+xueli+"','"+sex+"')";
-           String  sql = "select * from usermessage where username='"+username+"' and password='"+password+"'";
+           String  sql = "select * from usermessage where username='"+username+"' and password='"+passwordMd5+"'";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("操作数据库结果为" );
             while (rs.next()) {
