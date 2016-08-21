@@ -3,7 +3,10 @@ package com.wnb.web.db;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.wnb.web.model.UserInfo;
+import sun.security.provider.MD5;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -22,6 +25,12 @@ public class DataBaseDao {
             return false;
         }
         try {
+            try {
+                MessageDigest md5 = MessageDigest.getInstance("MD5");
+                md5.digest();
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
             Statement stmt = connection.createStatement();
             String sql = "insert into usermessage(username,password,xueli,sex) values('"+username+"','"+password+"','"+xueli+"','"+sex+"')";
             int result = stmt.executeUpdate(sql);
@@ -50,9 +59,8 @@ public class DataBaseDao {
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("操作数据库结果为" );
             while (rs.next()) {
-                System.out
-                        .println(rs.getString(1) + "\t" + rs.getString(2));// 入如果返回的是int类型可以用getInt()
-            return true;
+                System.out.println(rs.getString(1) + "\t" + rs.getString(2));// 入如果返回的是int类型可以用getInt()
+                return true;
             }
 
         } catch (SQLException e) {

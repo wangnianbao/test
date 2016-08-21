@@ -37,7 +37,7 @@ public class RegisterServlet extends HttpServlet {
             boolean flag = DataBaseDao.insert(username,password,xueli,sex);
             if (flag) {
                 req.setAttribute("msg", msg);
-                req.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(req, resp);
+                req.getRequestDispatcher("/WEB-INF/pages/index2.jsp").forward(req, resp);
             } else {
                 req.setAttribute("msg", msg);
                 req.getRequestDispatcher("/WEB-INF/pages/zhuce_index.jsp").forward(req, resp);
