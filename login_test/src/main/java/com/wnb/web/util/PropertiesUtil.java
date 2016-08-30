@@ -18,6 +18,7 @@ public class PropertiesUtil {
     }
 
     public static void main(String[] args) {
+
         System.out.println(properties.getProperty("username"));
     }
     public static String  getProperty(String key){

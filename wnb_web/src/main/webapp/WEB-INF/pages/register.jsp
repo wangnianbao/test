@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: wangnianbao
-  Date: 2016/7/28
-  Time: 21:07
+  Date: 2016/8/30
+  Time: 11:35
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>注册</title>
+    <title>register</title>
   <script type="text/javascript">
     function doLogout(){
       //访问LogoutServlet注销当前登录的用户
@@ -18,9 +18,9 @@
 
 </head>
 <body>
-<h1>欢迎来到注册界面</h1>
-<form action="${pageContext.request.contextPath}/register" method="post">
-  <table>
+<h1>欢迎来到学生管理系统注册中心</h1>
+<form acton="${pageContext.request.contextPath}/register"method="post" >
+  <table align="center">
     <tbody>
     <tr>
       <td colspan="2" align="center">请注册</td>
@@ -47,6 +47,5 @@
     </tbody>
   </table>
 </form>
-
 </body>
 </html>
