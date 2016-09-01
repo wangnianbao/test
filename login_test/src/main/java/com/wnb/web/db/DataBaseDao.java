@@ -4,13 +4,9 @@ import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.wnb.web.model.UserInfo;
 import com.wnb.web.util.MD5Utils;
-import sun.security.provider.MD5;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
@@ -28,7 +24,8 @@ public class DataBaseDao {
         try {
             String passwordMd5 = MD5Utils.getHash(password,MD5Utils.MD5);
             Statement stmt = connection.createStatement();
-            String sql = "insert into usermessage(username,password,xueli,sex) values('"+username+"','"+passwordMd5+"','"+xueli+"','"+sex+"')";
+            String sql = "insert into usermessage(username,password,xueli,sex)" +
+                    " values('"+username+"','"+passwordMd5+"','"+xueli+"','"+sex+"')";
             int result = stmt.executeUpdate(sql);
             System.out.println("操作数据库结果为空：" + result);
             if (result > 0){

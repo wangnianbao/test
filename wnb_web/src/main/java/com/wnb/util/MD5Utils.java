@@ -1,13 +1,13 @@
-package com.wnb.web.util;
+package com.wnb.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by wangnianbao on 2016/8/21.
+ * Created by wangnianbao on 2016/8/31.
  */
 public class MD5Utils {
-        public static final String MD5="MD5";
+    public static final String MD5="MD5";
     public static final String SHA="SHA";
     /**
      * 由于MD5 与SHA-1均是从MD4 发展而来，它们的结构和强度等特性有很多相似之处
@@ -105,4 +105,3 @@ public class MD5Utils {
     }
 
 }
-

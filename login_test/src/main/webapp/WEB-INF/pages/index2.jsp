@@ -32,7 +32,7 @@
   </c:if>
   <br>
   <c:if test="${msg.status != 1}">
-    <span  style="font-color:red">${msg.msg}</span>
+    <span  style="font-color:#ff0000">${msg.msg}</span>
   </c:if>
 </c:if>
 <hr/>
