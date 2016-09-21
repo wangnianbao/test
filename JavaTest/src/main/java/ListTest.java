@@ -63,17 +63,38 @@ public List cToS;
     }
     public  void testForEach(){
         System.out.println("有如下课程待选：(通过for each访问)");
-        for (Object obj: cToS){
-            Course cr=(Course)obj;
-            System.out.println("课程："+cr.id+":"+cr.name);
+        for (Object obj: cToS) {
+            Course cr = (Course) obj;
+            System.out.println("课程：" + cr.id + ":" + cr.name);
         }
+    }
+    public void testModify() {
+        cToS.set(4,new Course("7","毛概"));
+    }
+    public  void testRemove(){
+       // Course cr=(Course)cToS.get(4);
+      //  System.out.println("我是课程:"+cr.id+":"+cr.name);
+       // cToS.remove(cr);
+        System.out.println("课程成功删除");
 
+        Course[] cr1={(Course)cToS.get(4),(Course)cToS.get(5)};
+        cToS.removeAll( Arrays.asList(cr1));
+        testForEach();
+    }
+    public void testType(){
+        System.out.println("能否在List中添加一些奇怪的东西呢？");
+        cToS.add("我不是课程，我只是无辜的字符串");
     }
      public static void main(String[] args) {
    ListTest lt=new ListTest();
         lt.testAdd();
-         lt.testGet();
+        lt.testGet();
          lt.testIterator();
          lt.testForEach();
+         lt.testModify();
+         lt.testForEach();
+         lt.testRemove();
+        /* lt.testType();
+         lt.testForEach();*/
     }
 }
